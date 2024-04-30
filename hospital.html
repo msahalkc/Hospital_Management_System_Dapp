@@ -29,7 +29,7 @@
     </p>
 
     <h1>Hospital Registration</h1>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.12.0/ethers.umd.min.js" integrity="sha512-8s7eh8oL+Ku48Za1rEr9fPcaxmugsjRf8pqFfr/LIF2FNSdFXqzB4aBdM8GI+Q5gHAofYadcMv3LXNEvjvpaKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdn.jsdelivr.net/npm/web3@1.2.8/dist/web3.js"></script>
     <script>
       var account;
       window.addEventListener("load", async () => {
@@ -128,8 +128,8 @@
       function add_details() {
         var myContract = new web3.eth.Contract(abi, contractaddress, {
           from: account,
-          gasPrice: "5000000",
-          gas: "500000",
+          // gasPrice: "5000000",
+          // gas: "500000",
         });
         var ds1 = document.getElementById("addr").value;
         var ds2 = document.getElementById("spec").value;
@@ -149,8 +149,8 @@
       function show_details() {
         var myContract = new web3.eth.Contract(abi, contractaddress, {
           from: account,
-          gasPrice: "5000000",
-          gas: "500000",
+          // gasPrice: "5000000",
+          // gas: "500000",
         });
         var idd = document.getElementById("tid").value;
         var result = myContract.methods
@@ -169,8 +169,8 @@
       function del_details() {
         var myContract = new web3.eth.Contract(abi, contractaddress, {
           from: account,
-          gasPrice: "5000000",
-          gas: "500000",
+          // gasPrice: "5000000",
+          // gas: "500000",
         });
         var bid = document.getElementById("bid1").value;
         var result = myContract.methods
